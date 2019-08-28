@@ -33,6 +33,9 @@ class MainTableViewController: UITableViewController {
         createMockData()
         
         let editTableViewButton : UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(MainTableViewController.editTapped))
+        editTableViewButton.isAccessibilityElement = true
+        editTableViewButton.accessibilityIdentifier = Identifiers.editTableVievButton.rawValue
+        
         self.navigationItem.rightBarButtonItem = editTableViewButton
         
         self.registerCells(tableView: tableView)
@@ -107,11 +110,15 @@ extension MainTableViewController {
             let itemCell : ItemTableViewCell = tableView.dequeueReusableCell(withIdentifier: ItemTableViewCellName) as! ItemTableViewCell
             itemCell.setupWithItem(item: itemForIndexPath(indexPath: indexPath))
             itemCell.delegate = self
+            itemCell.isAccessibilityElement = true
+            itemCell.accessibilityIdentifier = Identifiers.itemCell.rawValue
             cell = itemCell
             break
         case .addSection:
             let addCell : AddActionTableViewCell = tableView.dequeueReusableCell(withIdentifier: AddActionTableViewCellName) as! AddActionTableViewCell
             addCell.delegate = self
+            addCell.isAccessibilityElement = true
+            addCell.accessibilityIdentifier = Identifiers.addCell.rawValue
             cell = addCell
             break
         }

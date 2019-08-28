@@ -31,6 +31,15 @@ class ItemTableViewCell: UITableViewCell {
         itemCountTextField.placeholder = "0"
         itemNameTextField.placeholder = "Add item"
         itemPriceTextField.placeholder = "Add price"
+        
+        itemIconButton.isAccessibilityElement = true
+        itemIconButton.accessibilityIdentifier = Identifiers.itemIconButton.rawValue
+        itemCountTextField.isAccessibilityElement = true
+        itemCountTextField.accessibilityIdentifier = Identifiers.itemCountTextField.rawValue
+        itemNameTextField.isAccessibilityElement = true
+        itemNameTextField.accessibilityIdentifier = Identifiers.itemNameTextField.rawValue
+        itemPriceTextField.isAccessibilityElement = true
+        itemPriceTextField.accessibilityIdentifier = Identifiers.itemPriceTextField.rawValue
     }
     
     func setupWithItem(item : Item?) {

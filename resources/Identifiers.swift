@@ -10,5 +10,11 @@ import Foundation
 
 enum Identifiers: String {
     case addNewLabel
-    
+    case editTableVievButton
+    case itemCell
+    case addCell
+    case itemIconButton
+    case itemCountTextField
+    case itemNameTextField
+    case itemPriceTextField
 }
