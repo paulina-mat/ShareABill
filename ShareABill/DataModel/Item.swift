@@ -28,4 +28,11 @@ class Item : NSObject {
         self.name = nil
         self.price = nil
     }
+    
+    func totalPrice() -> Double {
+        guard let quantity = quantity, let price = price else {
+            return 0
+        }
+        return quantity.doubleValue * price.doubleValue
+    }
 }

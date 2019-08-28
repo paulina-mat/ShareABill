@@ -17,4 +17,7 @@ enum Identifiers: String {
     case itemCountTextField
     case itemNameTextField
     case itemPriceTextField
+    case sumPriceTextField
+    case sumIconButton
+    case sumNameTextField
 }

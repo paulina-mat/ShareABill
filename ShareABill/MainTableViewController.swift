@@ -11,10 +11,12 @@ import UIKit
 enum SectionType {
     case itemSection
     case addSection
+    case summarySection
 }
 
 let ItemTableViewCellName = "ItemTableViewCell"
 let AddActionTableViewCellName = "AddActionTableViewCell"
+let CalculateSumTableViewCellName = "CalculateSumTableViewCell"
 
 class MainTableViewController: UITableViewController {
 
@@ -63,6 +65,14 @@ class MainTableViewController: UITableViewController {
         return removeSuccess
     }
     
+    func calculateSum() -> Double {
+        var sum = 0.0
+        for item in items {
+            sum += (item as! Item).totalPrice()
+        }
+        return sum.rounded()
+    }
+    
     @objc func editTapped() {
         self.tableView.setEditing(!(self.tableView.isEditing), animated: true)
     }
@@ -82,6 +92,9 @@ extension MainTableViewController {
         case 1:
             sectionType = .addSection
             break
+        case 2:
+            sectionType = .summarySection
+            break
         default:
             break
         }
@@ -95,6 +108,7 @@ extension MainTableViewController {
     func registerCells(tableView:UITableView) {
         self.registerNibWithName(tableView, ItemTableViewCellName)
         self.registerNibWithName(tableView, AddActionTableViewCellName)
+        self.registerNibWithName(tableView, CalculateSumTableViewCellName)
     }
     
     func registerNibWithName(_ tableView:UITableView, _ nibName:String) {
@@ -121,13 +135,18 @@ extension MainTableViewController {
             addCell.accessibilityIdentifier = Identifiers.addCell.rawValue
             cell = addCell
             break
+        case .summarySection:
+            let summaryCell : CalculateSumTableViewCell = tableView.dequeueReusableCell(withIdentifier: CalculateSumTableViewCellName) as! CalculateSumTableViewCell
+            summaryCell.sumPriceTextField.text = "\(calculateSum())"
+            cell = summaryCell
+            break
         }
 
         return cell
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2 //SEKCJE
+        return 3 //SEKCJE
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -138,6 +157,9 @@ extension MainTableViewController {
             numberOfRows = self.numberOfItems()
             break
         case .addSection:
+            numberOfRows = 1
+            break
+        case .summarySection:
             numberOfRows = 1
             break
         }
@@ -155,6 +177,7 @@ extension MainTableViewController {
             self.addItem(item: item)
             tableView.insertRows(at: [IndexPath(row: indexOfLastItem, section: 0)], with: .bottom)
         tableView.endUpdates()
+        updateTotalPrice()
     }
     
     func removeItem(index: Int, _ tableView: UITableView) {
@@ -163,6 +186,11 @@ extension MainTableViewController {
             tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .bottom)
         }
         tableView.endUpdates()
+        updateTotalPrice()
+    }
+    
+    func updateTotalPrice() {
+        tableView.reloadSections([2], with: .none)
     }
     
     func itemForIndexPath(indexPath : IndexPath) -> Item? {
@@ -181,7 +209,7 @@ extension MainTableViewController {
         case .itemSection:
             canEdit = true
             break
-        case .addSection:
+        case .addSection, .summarySection:
             canEdit = false
             break
         }
