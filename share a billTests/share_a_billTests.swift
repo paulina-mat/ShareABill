@@ -11,24 +11,39 @@ import XCTest
 
 class share_a_billTests: XCTestCase {
 
+    private var monkeyItem: Item!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        
+        monkeyItem = Item(icon: "🙈", quantity: 10, name: "monkey", price: 20.0)
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testIconEqualsMonkey() {
+        XCTAssertEqual(monkeyItem.icon, "🙈")
+    }
+    
+    func testQuantityEqualsTen() {
+        XCTAssertEqual(monkeyItem.quantity, 10)
+    }
+    
+    func testNameEqualsMonkey() {
+        XCTAssertEqual(monkeyItem.name, "monkey")
+    }
+    
+    func testPriceEqualTwenty() {
+        XCTAssertEqual(monkeyItem.price, 20.0)
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measure {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
 
 }

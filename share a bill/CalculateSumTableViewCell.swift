@@ -6,4 +6,16 @@
 //  Copyright © 2019 Paulina Matysiak. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol CalculateSumTableViewCellDelegate {
+    
+}
+
+class CalculateSumTableViewCell : UITableViewCell {
+    
+    @IBOutlet weak var sumIconButton: UIButton!
+    @IBOutlet weak var sumNameTextField: UITextField!
+    @IBOutlet weak var sumPriceTextField: UITextField!
+    
+}

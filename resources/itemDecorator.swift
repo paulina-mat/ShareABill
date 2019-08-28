@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+class ItemDecorator {
+    func itemIcons() -> [String] {
+        return []
+    }
+}
+
+class FoodItemDecorator : ItemDecorator {
+    override func itemIcons() -> [String] {
+        return ["🍕", "🍤", "🍝", "🍜", "🍺", "🍷", "☕️", "🥤", "🍹"]
+    }
+}
+
+class DrinkItemDecorator : ItemDecorator {
+    override func itemIcons() -> [String] {
+        return ["🍼", "🥛", "🍵", "🍸", "🍺", "🍷", "☕️", "🥤", "🍹", "🍾"]
+    }
+}

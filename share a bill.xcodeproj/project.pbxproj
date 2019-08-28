@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		AA7C35E92247D50B00ABA5D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7C35E82247D50B00ABA5D0 /* AppDelegate.swift */; };
-		AA7C35EB2247D50B00ABA5D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7C35EA2247D50B00ABA5D0 /* ViewController.swift */; };
+		AA7C35EB2247D50B00ABA5D0 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7C35EA2247D50B00ABA5D0 /* MainTableViewController.swift */; };
 		AA7C35EE2247D50B00ABA5D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA7C35EC2247D50B00ABA5D0 /* Main.storyboard */; };
 		AA7C35F02247D50D00ABA5D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA7C35EF2247D50D00ABA5D0 /* Assets.xcassets */; };
 		AA7C35F32247D50D00ABA5D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA7C35F12247D50D00ABA5D0 /* LaunchScreen.storyboard */; };
 		AA7C35FE2247D50D00ABA5D0 /* share_a_billTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7C35FD2247D50D00ABA5D0 /* share_a_billTests.swift */; };
 		AA7C36092247D50D00ABA5D0 /* share_a_billUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7C36082247D50D00ABA5D0 /* share_a_billUITests.swift */; };
+		AA7C36182247DEC900ABA5D0 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7C36162247DEC900ABA5D0 /* ItemTableViewCell.swift */; };
+		AA7C36192247DEC900ABA5D0 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7C36172247DEC900ABA5D0 /* ItemTableViewCell.xib */; };
+		AA7C361C2247F76300ABA5D0 /* AddActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7C361A2247F76300ABA5D0 /* AddActionTableViewCell.swift */; };
+		AA7C361D2247F76300ABA5D0 /* AddActionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7C361B2247F76300ABA5D0 /* AddActionTableViewCell.xib */; };
+		AA7C36202248067B00ABA5D0 /* itemDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7C361F2248067B00ABA5D0 /* itemDecorator.swift */; };
+		AA7C3623224D612A00ABA5D0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7C3622224D612A00ABA5D0 /* Item.swift */; };
+		AA7C3625226F0BAE00ABA5D0 /* CalculateSumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7C3624226F0BAE00ABA5D0 /* CalculateSumTableViewCell.xib */; };
+		AA7C3627226F100500ABA5D0 /* CalculateSumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7C3626226F100500ABA5D0 /* CalculateSumTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,7 @@
 /* Begin PBXFileReference section */
 		AA7C35E52247D50B00ABA5D0 /* share a bill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "share a bill.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA7C35E82247D50B00ABA5D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AA7C35EA2247D50B00ABA5D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AA7C35EA2247D50B00ABA5D0 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		AA7C35ED2247D50B00ABA5D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA7C35EF2247D50D00ABA5D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA7C35F22247D50D00ABA5D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +55,14 @@
 		AA7C36042247D50D00ABA5D0 /* share a billUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "share a billUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA7C36082247D50D00ABA5D0 /* share_a_billUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = share_a_billUITests.swift; sourceTree = "<group>"; };
 		AA7C360A2247D50D00ABA5D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA7C36162247DEC900ABA5D0 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		AA7C36172247DEC900ABA5D0 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
+		AA7C361A2247F76300ABA5D0 /* AddActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActionTableViewCell.swift; sourceTree = "<group>"; };
+		AA7C361B2247F76300ABA5D0 /* AddActionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddActionTableViewCell.xib; sourceTree = "<group>"; };
+		AA7C361F2248067B00ABA5D0 /* itemDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemDecorator.swift; sourceTree = "<group>"; };
+		AA7C3622224D612A00ABA5D0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		AA7C3624226F0BAE00ABA5D0 /* CalculateSumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculateSumTableViewCell.xib; sourceTree = "<group>"; };
+		AA7C3626226F100500ABA5D0 /* CalculateSumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateSumTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +93,7 @@
 		AA7C35DC2247D50B00ABA5D0 = {
 			isa = PBXGroup;
 			children = (
+				AA7C361E2248064D00ABA5D0 /* resources */,
 				AA7C35E72247D50B00ABA5D0 /* share a bill */,
 				AA7C35FC2247D50D00ABA5D0 /* share a billTests */,
 				AA7C36072247D50D00ABA5D0 /* share a billUITests */,
@@ -98,7 +115,14 @@
 			isa = PBXGroup;
 			children = (
 				AA7C35E82247D50B00ABA5D0 /* AppDelegate.swift */,
-				AA7C35EA2247D50B00ABA5D0 /* ViewController.swift */,
+				AA7C3621224D60F400ABA5D0 /* DataModel */,
+				AA7C35EA2247D50B00ABA5D0 /* MainTableViewController.swift */,
+				AA7C36162247DEC900ABA5D0 /* ItemTableViewCell.swift */,
+				AA7C36172247DEC900ABA5D0 /* ItemTableViewCell.xib */,
+				AA7C361A2247F76300ABA5D0 /* AddActionTableViewCell.swift */,
+				AA7C3624226F0BAE00ABA5D0 /* CalculateSumTableViewCell.xib */,
+				AA7C3626226F100500ABA5D0 /* CalculateSumTableViewCell.swift */,
+				AA7C361B2247F76300ABA5D0 /* AddActionTableViewCell.xib */,
 				AA7C35EC2247D50B00ABA5D0 /* Main.storyboard */,
 				AA7C35EF2247D50D00ABA5D0 /* Assets.xcassets */,
 				AA7C35F12247D50D00ABA5D0 /* LaunchScreen.storyboard */,
@@ -123,6 +147,22 @@
 				AA7C360A2247D50D00ABA5D0 /* Info.plist */,
 			);
 			path = "share a billUITests";
+			sourceTree = "<group>";
+		};
+		AA7C361E2248064D00ABA5D0 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA7C361F2248067B00ABA5D0 /* itemDecorator.swift */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		AA7C3621224D60F400ABA5D0 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				AA7C3622224D612A00ABA5D0 /* Item.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,8 +269,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7C36192247DEC900ABA5D0 /* ItemTableViewCell.xib in Resources */,
 				AA7C35F32247D50D00ABA5D0 /* LaunchScreen.storyboard in Resources */,
 				AA7C35F02247D50D00ABA5D0 /* Assets.xcassets in Resources */,
+				AA7C361D2247F76300ABA5D0 /* AddActionTableViewCell.xib in Resources */,
+				AA7C3625226F0BAE00ABA5D0 /* CalculateSumTableViewCell.xib in Resources */,
 				AA7C35EE2247D50B00ABA5D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,7 +299,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA7C35EB2247D50B00ABA5D0 /* ViewController.swift in Sources */,
+				AA7C3627226F100500ABA5D0 /* CalculateSumTableViewCell.swift in Sources */,
+				AA7C35EB2247D50B00ABA5D0 /* MainTableViewController.swift in Sources */,
+				AA7C361C2247F76300ABA5D0 /* AddActionTableViewCell.swift in Sources */,
+				AA7C36202248067B00ABA5D0 /* itemDecorator.swift in Sources */,
+				AA7C36182247DEC900ABA5D0 /* ItemTableViewCell.swift in Sources */,
+				AA7C3623224D612A00ABA5D0 /* Item.swift in Sources */,
 				AA7C35E92247D50B00ABA5D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

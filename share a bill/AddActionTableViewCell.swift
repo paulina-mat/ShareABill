@@ -8,11 +8,20 @@
 
 import UIKit
 
+protocol AddActionTableViewCellDelegate {
+    func addItemTapped(_ sender: Any)
+}
+
 class AddActionTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var addNewItemLabel: UILabel!
+  
+    var delegate: AddActionTableViewCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        addNewItemLabel.text = "Add new item"
+ 
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -21,4 +30,7 @@ class AddActionTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func addItemTapped(_ sender: Any) {
+        delegate?.addItemTapped(sender)
+    }
 }
