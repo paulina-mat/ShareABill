@@ -21,7 +21,8 @@ class AddActionTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         addNewItemLabel.text = "Add new item"
- 
+        addNewItemLabel.isAccessibilityElement = true
+        addNewItemLabel.accessibilityIdentifier = Identifiers.addNewLabel.rawValue
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
