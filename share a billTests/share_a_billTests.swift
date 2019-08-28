@@ -38,6 +38,16 @@ class share_a_billTests: XCTestCase {
     func testPriceEqualTwenty() {
         XCTAssertEqual(monkeyItem.price, 20.0)
     }
+    
+    func testIconEqualsMonkey2() {
+        let isMonkey = (monkeyItem.icon == "🙈")
+        
+        if isMonkey {
+            XCTAssertTrue(isMonkey, "It's a monkey!")
+        } else {
+            XCTFail("It's not a monkey")
+        }
+    }
 
 //    func testPerformanceExample() {
 //        // This is an example of a performance test case.
